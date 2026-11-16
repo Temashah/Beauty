@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Салон красоты ECLAT — Архангельск</title>
+    <style>
+        :root { --primary: #c2185b; --dark: #1e1e24; --light: #faf7f5; --text: #333; --accent: #ff8fab; }
+        * { box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Roboto, Arial, sans-serif; margin: 0; line-height: 1.6; color: var(--text); background: var(--light); }
+        header { background: #fff; padding: 1rem 5%; box-shadow: 0 2px 10px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 100; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 800; letter-spacing: 2px; color: var(--dark); }
+        .logo span { color: var(--primary); }
+        .nav-links a { margin-left: 20px; text-decoration: none; color: var(--dark); font-weight: 500; }
+        .btn-book { background: linear-gradient(135deg, var(--primary), var(--accent)); color: #fff; padding: 10px 24px; border-radius: 30px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 14px rgba(194,24,91,0.35); transition: transform .2s; display: inline-block; }
+        .btn-book:hover { transform: translateY(-2px); }
+        .hero { background: linear-gradient(120deg, rgba(30,30,36,0.9), rgba(194,24,91,0.8)); min-height: 70vh; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; }
+        .hero h1 { font-size: 3rem; margin: 0 0 1rem; }
+        .hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 2rem; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+        .section-title { text-align: center; margin-bottom: 10px; color: var(--dark); }
+        .section-sub { text-align: center; color: #888; margin-bottom: 30px; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+        .service-card { background: #fff; padding: 24px; border-radius: 14px; box-shadow: 0 6px 16px rgba(0,0,0,0.06); transition: transform .2s; }
+        .service-card:hover { transform: translateY(-4px); }
+        .service-card h3 { margin-top: 0; color: var(--dark); }
+        .service-card span { color: var(--primary); font-weight: 700; font-size: 1.1rem; }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+        .gallery img { width: 100%; height: 220px; object-fit: cover; display: block; border-radius: 12px; }
+        .booking { background: var(--dark); color: #fff; border-radius: 20px; padding: 40px 20px; text-align: center; }
+        .booking-form { background: #fff; color: var(--text); padding: 30px; border-radius: 14px; max-width: 480px; margin: 0 auto; text-align: left; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: 600; }
+        .form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; }
+        .btn-submit { width: 100%; padding: 14px; background: linear-gradient(135deg, var(--primary), var(--accent)); color: #fff; border: none; border-radius: 30px; font-size: 1rem; cursor: pointer; font-weight: 700; }
+        .btn-submit:disabled { opacity: .6; }
+        #form-msg { text-align: center; margin-top: 10px; color: var(--primary); font-weight: 600; display: none; }
+        footer { background: var(--dark); color: #bbb; text-align: center; padding: 24px; }
+        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .nav-links a:not(.btn-book) { display: none; } }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">ECLAT <span>BEAUTY</span></div>
+            <div class="nav-links">
+                <a href="#services">Услуги</a>
+                <a href="#gallery">Работы</a>
+                <a href="#book">Контакты</a>
+                <a href="#book" class="btn-book">Записаться</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>Идеальная красота — в деталях</h1>
+            <p>Салон премиум-класса в Архангельске. Стрижки, окрашивание, уход и макияж — доверьтесь профессионалам.</p>
+            <a href="#book" class="btn-book">Выбрать услугу</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <section id="services">
+            <h2 class="section-title">Наши услуги</h2>
+            <p class="section-sub">Первое посещение — скидка 15%</p>
+            <div class="services-grid">
+                <div class="service-card"><h3>Стрижка и укладка</h3><p>Моделирование формы, подбор стиля под тип лица.</p><span>от 2 500 ₽</span></div>
+                <div class="service-card"><h3>Окрашивание волос</h3><p>Балаяж, шатуш, тотал блонд — трендовые техники.</p><span>от 4 000 ₽</span></div>
+                <div class="service-card"><h3>Маникюр и педикюр</h3><p>Покрытие гель-лаком, дизайн, уход за кутикулой.</p><span>от 1 800 ₽</span></div>
+                <div class="service-card"><h3>Макияж и брови</h3><p>Дневной, вечерний, свадебный макияж, коррекция.</p><span>от 2 000 ₽</span></div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2 class="section-title">Наши работы</h2>
+            <p class="section-sub">Реальные результаты наших мастеров</p>
+            <div class="gallery">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='440' height='440'><defs><linearGradient id='a' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23c2185b'/><stop offset='1' stop-color='%23ff8fab'/></linearGradient></defs><rect width='440' height='440' fill='url(%23a)'/><text x='220' y='210' fill='white' font-family='Arial' font-size='30' font-weight='bold' text-anchor='middle'>HAIR</text><text x='220' y='250' fill='white' font-family='Arial' font-size='15' text-anchor='middle' opacity='0.8'>стиль и форма</text></svg>" alt="Стрижка">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='440' height='440'><defs><linearGradient id='b' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%237b1fa2'/><stop offset='1' stop-color='%23e1bee7'/></linearGradient></defs><rect width='440' height='440' fill='url(%23b)'/><text x='220' y='210' fill='white' font-family='Arial' font-size='30' font-weight='bold' text-anchor='middle'>NAILS</text><text x='220' y='250' fill='white' font-family='Arial' font-size='15' text-anchor='middle' opacity='0.8'>гель-лак и дизайн</text></svg>" alt="Маникюр">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='440' height='440'><defs><linearGradient id='c' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%231e1e24'/><stop offset='1' stop-color='%23c2185b'/></linearGradient></defs><rect width='440' height='440' fill='url(%23c)'/><text x='220' y='210' fill='white' font-family='Arial' font-size='30' font-weight='bold' text-anchor='middle'>MAKEUP</text><text x='220' y='250' fill='white' font-family='Arial' font-size='15' text-anchor='middle' opacity='0.8'>вечерний и свадебный</text></svg>" alt="Макияж">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='440' height='440'><defs><linearGradient id='d' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23f06292'/><stop offset='1' stop-color='%23ffd1dc'/></linearGradient></defs><rect width='440' height='440' fill='url(%23d)'/><text x='220' y='210' fill='white' font-family='Arial' font-size='30' font-weight='bold' text-anchor='middle'>SKINCARE</text><text x='220' y='250' fill='white' font-family='Arial' font-size='15' text-anchor='middle' opacity='0.8'>уход и релакс</text></svg>" alt="Уход">
+            </div>
+        </section>
+
+        <section class="booking" id="book">
+            <h2 class="section-title" style="color:#fff;">Записаться на приём</h2>
+            <p class="section-sub" style="color:#ccc;">Оставьте заявку — администратор перезвонит в течение 15 минут</p>
+            <div class="booking-form">
+                <form id="book-form">
+                    <div class="form-group"><label for="name">Ваше имя</label><input type="text" id="name" placeholder="Анна" required></div>
+                    <div class="form-group"><label for="phone">Телефон</label><input type="tel" id="phone" placeholder="+7 (999) 000-00-00" required></div>
+                    <div class="form-group"><label for="service">Услуга</label>
+                        <select id="service">
+                            <option>Стрижка и укладка</option>
+                            <option>Окрашивание волос</option>
+                            <option>Маникюр и педикюр</option>
+                            <option>Макияж и брови</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-submit">Отправить заявку</button>
+                    <p id="form-msg">✓ Заявка отправлена! Мы вам перезвоним.</p>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2024 Салон красоты ECLAT. Архангельск, ул. Примерная, 10</p>
+        <p>Телефон: +7 (999) 123-45-67 | WhatsApp | Telegram</p>
+    </footer>
+
+    <script>
+        const BOT_TOKEN = 'ВСТАВЬ_ТОКЕН';
+        const CHAT_ID = 'ВСТАВЬ_CHAT_ID';
+
+        document.getElementById('book-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const msg = `💫 Новая заявка с сайта!\nИмя: ${document.getElementById('name').value}\nТелефон: ${document.getElementById('phone').value}\nУслуга: ${document.getElementById('service').value}`;
+            const btn = this.querySelector('.btn-submit');
+            btn.disabled = true;
+            fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(msg)}`)
+                .then(r => r.json())
+                .then(data => {
+                    document.getElementById('form-msg').style.display = 'block';
+                    this.reset();
+                })
+                .catch(() => alert('Не получилось отправить. Проверьте токен бота.'))
+                .finally(() => btn.disabled = false);
+        });
+    </script>
+</body>
+</html>
